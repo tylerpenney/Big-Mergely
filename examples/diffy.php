@@ -105,6 +105,7 @@
 
 					$.ajax({
 						type: 'GET', async: true, dataType: 'text',
+						// CHANGE THIS TO YOUR LOCAL HOST DIRECTORY ------
 						url: 'http://localhost:8888/mergely-3.3.6/examples/<?php echo $get_cust; ?>',
 						success: function (response) {
 							$('<?php echo "#" . $filenameDIV;?>').mergely('lhs', response);
@@ -112,6 +113,7 @@
 					});
 					$.ajax({
 						type: 'GET', async: true, dataType: 'text',
+						// CHANGE THIS TO YOUR LOCAL HOST DIRECTORY ------
 						url: 'http://localhost:8888/mergely-3.3.6/examples/<?php echo $get_def ?>',
 						success: function (response) {
 							$('<?php echo "#" . $filenameDIV;?>').mergely('rhs', response);
@@ -123,8 +125,7 @@
 						var lhscontent = $('<?php echo "#" . $filenameDIV;?>').mergely('get', 'lhs');
 						$.ajax({
 						    type: 'POST',
-						    // make sure you respect the same origin policy with this url:
-						    // http://en.wikipedia.org/wiki/Same_origin_policy
+						    // CHANGE THIS TO YOUR OWN LOCAL DIRECTORY -----
 						    url: 'http://localhost:8888/mergely-3.3.6/examples/writediffy.php',
 						    data: { 
 						        'filecontents': lhscontent,
