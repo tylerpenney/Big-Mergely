@@ -13,4 +13,4 @@ diffy.php allows you to compare and merge large groups of PHP files and write th
 
 This script looks for comparable files in the default/ and custom/ folders, then checks to see if there is a filesize difference for each file. If there are two comparable files of different sizes, the script adds them to an array in groups of 10. You can access each group by including a get var at the end of the uri. example: diffy.php?group=2
 
-** It is recommended you only run diffy.php on a non-production local site **
+**It is recommended you only run diffy.php on a non-production local site**
